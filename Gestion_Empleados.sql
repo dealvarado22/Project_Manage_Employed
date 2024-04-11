@@ -28,7 +28,7 @@ CREATE TABLE Empleados (
     CONSTRAINT fk_cargo_empleado FOREIGN KEY (ID_Cargo) REFERENCES Cargo(ID_Cargo)
 );
 
--- Tabla Horario Laboral
+-- Tabla de Horario Laboral
 CREATE TABLE Horario_Laboral (
     Horario_laboral_ID INT AUTO_INCREMENT PRIMARY KEY,
     Empleado_ID INT,
@@ -39,13 +39,13 @@ CREATE TABLE Horario_Laboral (
     CONSTRAINT fk_horario_empleado FOREIGN KEY (Empleado_ID) REFERENCES Empleados(Empleado_ID)
 );
 
--- Tabla Estados Vacaciones
+-- Tabla de Estados Vacaciones
 CREATE TABLE Estados_Vacaciones (
     ID_Estado INT AUTO_INCREMENT PRIMARY KEY,
     Estado_Vacacion VARCHAR(50) NOT NULL
 );
 
--- Tabla Vacaciones
+-- Tabla de Vacaciones
 CREATE TABLE Vacaciones (
     Vacacion_ID INT AUTO_INCREMENT PRIMARY KEY,
     Empleado_ID INT,
@@ -56,7 +56,7 @@ CREATE TABLE Vacaciones (
     CONSTRAINT fk_estado_vacacion FOREIGN KEY (Estado_Vacacion) REFERENCES Estados_Vacaciones(ID_Estado)
 );
 
--- Tabla Informes
+-- Tabla de Informes
 CREATE TABLE Informes (
     Informe_ID INT AUTO_INCREMENT PRIMARY KEY,
     Empleado_ID INT,
